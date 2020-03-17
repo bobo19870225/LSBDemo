@@ -1,0 +1,28 @@
+buildscript {
+    apply from: 'versions.gradle'
+    addRepos(repositories)
+    dependencies {
+        classpath deps.android_gradle_plugin
+    }
+    repositories {
+        google()
+    }
+}
+
+allprojects {
+    addRepos(repositories)
+}
+allprojects {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+        maven { url 'https://jitpack.io' }
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

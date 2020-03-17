@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LSBDemo</string>
+    <string name="retry">重试</string>
+    <string name="set">设置</string>
+</resources>
